@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Animal Collector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-light bg-primary text-white">
+      <a class="navbar-brand text-white" href="#">
+        <%= image_tag "cat.svg", class: "cat-brand-icon d-inline-block align-top" %>
+        The Animal Collector
+      </a>
+</nav>
+    <div class="container-fluid">
+      <p id="error"><%= flash[:error] %></p>
+      <p id="notice"><%= flash[:notice] %></p>
+      <%= yield %>
+    </div>
+  </body>
+</html>

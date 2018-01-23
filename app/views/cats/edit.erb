@@ -1,0 +1,77 @@
+<div class="row">
+  <div class="col-9">
+    <span class="align-bottom">
+      <h1><%= "Edit: #{@cat.name}" %></h1>
+    </span>
+  </div>
+  <div class="col-3 text-right">
+    <span class="align-bottom text-right">
+      <%= link_to "Zurück", cats_path, class: "btn btn-primary" %>
+    </span>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <br/>
+  </div>
+</div>
+
+<%= form_for @cat, :url => { :action => "update" } do |f| %>
+
+  <table class="table cats-table">
+    <tr>
+      <td>
+        <b>
+          <%= f.label :name %>
+        </b>
+      </td>
+      <td>
+        <%= f.text_field :name, class: "form-control" %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>
+          <%= f.label :pre_name%>
+        </b>
+      </td>
+      <td>
+        <%= f.text_field :pre_name, class: "form-control" %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>
+          <%= f.label :birthdate %>
+        </b>
+      </td>
+      <td>
+        <%= f.date_field :birthdate, class: "form-control"%>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>
+          <%= f.label :info %>
+        </b>
+      </td>
+      <td>
+        <%= text_area(:cat, :info , cols: 20, rows: 40, class: "form-control")%>
+      </td>
+    </tr>
+  </table>
+
+  <div class="row">
+    <div class="col-12 text-right">
+        <%= f.submit "Speichern", class: "btn btn-primary"%>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 text-right">
+        <br>
+    </div>
+  </div>
+
+<% end %>

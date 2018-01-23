@@ -1,0 +1,52 @@
+<h1>Hello world!</h1>
+
+<div class="cat_image">
+  <%= image_tag('cat.jpg') %>
+</div>
+
+<h3>Unsere Katzen:</h3>
+<table>
+  <thead>
+    <tr>
+      <td>
+        Name
+      </td>
+      <td>
+        Vorname
+      </td>
+      <td>
+        Alter
+      </td>
+      <td>
+        Info
+      </td>
+    </tr>
+  </thad>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td>
+          <%= user[0] %>
+        </td>
+        <td>
+          <%= user[1] %>
+        </td>
+        <td>
+          <%= user[2] %>
+        </td>
+        <td>
+          <%= user[3] %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<hr>
+
+
+
+
+<h2>
+  Liebe Katzenfreunde, diese Katzen befinden sich momentan noch in der Ukraine und suchen alle ein liebevolles Zuhause.
+</h2>

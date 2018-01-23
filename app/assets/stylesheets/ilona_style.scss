@@ -1,0 +1,40 @@
+html {
+  background: violet;
+  font-size: 14pt;
+  font-family: Arial;
+}
+table {
+  border: 0px;
+  width: 50%;
+}
+td{
+  padding: 3px;
+}
+thead {
+  font-size: 16pt;
+  color: white;
+  font-weight: 200;
+  background: black;
+}
+
+tbody {
+  background: white;
+  color: black;
+}
+
+h1 {
+  color: white;
+}
+
+hr {
+  color: blue;
+  border: 0px;
+}
+
+
+.cat_image {
+  img {
+      width: 300px;
+  }
+
+}
