@@ -1,8 +1,8 @@
-<h1>Neue Katze erfassen</h1>
+<h1>Neue Hunde erfassen</h1>
 
 <br>
 
-<%= form_for @cat do |f| %>
+<%= form_for @dog do |f| %>
 
   <table>
     <tr>
@@ -34,7 +34,7 @@
         <%= f.label :info %>
       </td>
       <td>
-        <%= text_area(:cat, :info , cols: 20, rows: 20) %>
+        <%= text_area(:dog, :info , cols: 20, rows: 20) %>
       </td>
     </tr>
   </table>

@@ -4,7 +4,7 @@ class CreateDogs < ActiveRecord::Migration[5.1]
       t.string :name
       t.string :pre_name
       t.date :birthdate
-      t.text :info
+      t.string :info
 
       t.timestamps
     end

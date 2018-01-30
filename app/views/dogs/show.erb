@@ -1,0 +1,67 @@
+<div class="row">
+  <div class="col-9">
+    <span class="align-bottom">
+      <h1><%= "#{@dog.name}" %></h1>
+    </span>
+  </div>
+  <div class="col-3">
+    <span class="align-bottom text-right">
+      <%= link_to "Edit", edit_dog_path(@dog), class: "btn btn-primary" %>
+      <%= link_to "Zurück", dogs_path, class: "btn btn-primary" %>
+    </span>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <br/>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <table class="table dogs-table">
+      <tr>
+        <td>
+          <b>
+            Vorname
+          </b>
+        </td>
+        <td>
+          <%= @dog.pre_name %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <b>
+            Name
+          </b>
+        </td>
+        <td>
+          <%= @dog.name %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <b>
+            Geburtsdatum
+          </b>
+        </td>
+        <td>
+          <%= @dog.birthdate %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <b>
+            Info
+          </b>
+        </td>
+        <td>
+          <%= @dog.info %>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+</div>
