@@ -7,5 +7,6 @@ Rails.application.routes.draw do
 
   resources :cats
   resources :dogs
+  resources :horses
 
 end
