@@ -7,7 +7,7 @@
   <div class="col-3">
     <span class="align-bottom text-right">
       <%= link_to "Edit", edit_snake_path(@snake), class: "btn btn-primary" %>
-      <%= link_to "Zurück", snake_path, class: "btn btn-primary" %>
+      <%= link_to "Zurück", snakes_path, class: "btn btn-primary" %>
     </span>
   </div>
 </div>
@@ -28,7 +28,7 @@
           </b>
         </td>
         <td>
-          <%= @snake.pre_name %>
+          <%= @snake.prename %>
         </td>
       </tr>
       <tr>

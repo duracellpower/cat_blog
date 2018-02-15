@@ -4,11 +4,11 @@ class ElefantsController < ApplicationController
   end
 
   def index
-    @elefant = Elefant.all
+    @elefants = Elefant.all
   end
 
   def create
-    @elefant = Elefant.new(dog_params)
+    @elefant = Elefant.new(elefant_params)
 
     if @elefant.save
       redirect_to action: "index"
@@ -40,6 +40,6 @@ class ElefantsController < ApplicationController
   private
 
   def elefant_params
-    params.require(:elefant).permit(:name, :pre_name, :birthdate, :info)
+    params.require(:elefant).permit(:name, :prename, :birthdate, :info)
   end
 end

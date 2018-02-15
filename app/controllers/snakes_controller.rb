@@ -1,4 +1,4 @@
-class SnakeController < ApplicationController
+class SnakesController < ApplicationController
 
   def new
     @snake = Snake.new
@@ -41,7 +41,7 @@ class SnakeController < ApplicationController
   private
 
   def snake_params
-    params.require(:snake).permit(:name, :pre_name, :birthdate, :info)
+    params.require(:snake).permit(:name, :prename, :birthdate, :info)
   end
 
 end

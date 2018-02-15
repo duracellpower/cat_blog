@@ -7,7 +7,7 @@
   <div class="col-3">
     <span class="align-bottom text-right">
       <%= link_to "Edit", edit_elefant_path(@elefant), class: "btn btn-primary" %>
-      <%= link_to "Zurück", elefant_path, class: "btn btn-primary" %>
+      <%= link_to "Zurück", elefants_path, class: "btn btn-primary" %>
     </span>
   </div>
 </div>
@@ -28,7 +28,7 @@
           </b>
         </td>
         <td>
-          <%= @elefant.pre_name %>
+          <%= @elefant.prename %>
         </td>
       </tr>
       <tr>
