@@ -1,0 +1,67 @@
+<div class="row">
+  <div class="col-9">
+    <span class="align-bottom">
+      <h1><%= "#{@lion.name}" %></h1>
+    </span>
+  </div>
+  <div class="col-3">
+    <span class="align-bottom text-right">
+      <%= link_to "Edit", edit_lion_path(@lion), class: "btn btn-primary" %>
+      <%= link_to "Zurück", lion_path, class: "btn btn-primary" %>
+    </span>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <br/>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <table class="table lions-table">
+      <tr>
+        <td>
+          <b>
+            Vorname
+          </b>
+        </td>
+        <td>
+          <%= @lion.pre_name %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <b>
+            Name
+          </b>
+        </td>
+        <td>
+          <%= @lion.name %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <b>
+            Geburtsdatum
+          </b>
+        </td>
+        <td>
+          <%= @lion.birthdate %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <b>
+            Info
+          </b>
+        </td>
+        <td>
+          <%= @lion.info %>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+</div>

@@ -1,0 +1,67 @@
+<div class="row">
+  <div class="col-9">
+    <span class="align-bottom">
+      <h1><%= "#{@snake.name}" %></h1>
+    </span>
+  </div>
+  <div class="col-3">
+    <span class="align-bottom text-right">
+      <%= link_to "Edit", edit_snake_path(@snake), class: "btn btn-primary" %>
+      <%= link_to "Zurück", snake_path, class: "btn btn-primary" %>
+    </span>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <br/>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <table class="table snakes-table">
+      <tr>
+        <td>
+          <b>
+            Vorname
+          </b>
+        </td>
+        <td>
+          <%= @snake.pre_name %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <b>
+            Name
+          </b>
+        </td>
+        <td>
+          <%= @snake.name %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <b>
+            Geburtsdatum
+          </b>
+        </td>
+        <td>
+          <%= @snake.birthdate %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <b>
+            Info
+          </b>
+        </td>
+        <td>
+          <%= @snake.info %>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+</div>

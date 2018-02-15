@@ -1,0 +1,44 @@
+<h1>Neue Schlangen erfassen</h1>
+
+<br>
+
+<%= form_for @snake do |f| %>
+
+  <table>
+    <tr>
+      <td>
+        <%= f.label :name %>
+      </td>
+      <td>
+        <%= f.text_field :name %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :pre_name %>
+      </td>
+      <td>
+        <%= f.text_field :pre_name %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :birthdate %>
+      </td>
+      <td>
+        <%= f.date_field :birthdate%>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :info %>
+      </td>
+      <td>
+        <%= text_area(:snake, :info , cols: 20, rows: 20) %>
+      </td>
+    </tr>
+  </table>
+
+  <%= f.submit %>
+
+<% end %>

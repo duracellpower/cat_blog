@@ -1,0 +1,71 @@
+<div class="row">
+  <div class="col-10">
+    <span class="align-bottom">
+      <h1>Alle Vögel</h1>
+    </span>
+  </div>
+  <div class="col-2">
+    <span class="align-bottom">
+      <%= link_to "Neuer Vogel", new_bird_path, class: "btn btn-primary" %>
+    </span>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <br/>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <table class="table table-striped">
+      <thead class="bg-primary text-white font-weight-bold">
+        <tr>
+          <td>
+            Vorname
+          </td>
+          <td>
+            Name
+          </td>
+          <td>
+            Alter
+          </td>
+          <td>
+            Info
+          </td>
+          <td class="text-right">
+            Aktionen
+          </td>
+        </tr>
+      </thad>
+      <tbody>
+        <% @birds.each do |bird| %>
+          <tr>
+            <td>
+              <%= bird.pre_name %>
+            </td>
+            <td>
+              <%= bird.name %>
+            </td>
+            <td>
+              <%= bird.age %>
+            </td>
+            <td>
+              <%= bird.info %>
+            </td>
+            <td class="text-right">
+              <div class="row">
+                <div class="col">
+                  <%= link_to "Delete", bird_path(bird), method: :delete, data: {confirm: "Bisch sicher ?"}, class: "btn btn-danger" %>
+                  <%= link_to "Edit", edit_bird_path(bird), class: "btn btn-primary" %>
+                  <%= link_to "View", bird_path(bird), class: "btn btn-primary" %>
+                </div>
+              </div>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

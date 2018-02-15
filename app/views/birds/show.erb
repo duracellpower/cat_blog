@@ -1,0 +1,67 @@
+<div class="row">
+  <div class="col-9">
+    <span class="align-bottom">
+      <h1><%= "#{@bird.name}" %></h1>
+    </span>
+  </div>
+  <div class="col-3">
+    <span class="align-bottom text-right">
+      <%= link_to "Edit", edit_bird_path(@bird), class: "btn btn-primary" %>
+      <%= link_to "Zurück", birds_path, class: "btn btn-primary" %>
+    </span>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <br/>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <table class="table birds-table">
+      <tr>
+        <td>
+          <b>
+            Vorname
+          </b>
+        </td>
+        <td>
+          <%= @bird.pre_name %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <b>
+            Name
+          </b>
+        </td>
+        <td>
+          <%= @bird.name %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <b>
+            Geburtsdatum
+          </b>
+        </td>
+        <td>
+          <%= @bird.birthdate %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <b>
+            Info
+          </b>
+        </td>
+        <td>
+          <%= @bird.info %>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+</div>
