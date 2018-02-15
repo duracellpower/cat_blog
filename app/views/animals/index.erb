@@ -1,0 +1,77 @@
+<div class="row">
+  <div class="col-10">
+    <span class="align-bottom">
+      <h1>Alle Tiere</h1>
+    </span>
+  </div>
+  <div class="col-2">
+    <span class="align-bottom">
+      <%= link_to "Neues Tier", new_animal_path, class: "btn btn-primary" %>
+    </span>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <br/>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <table class="table table-striped">
+      <thead class="bg-primary text-white font-weight-bold">
+        <tr>
+          <td>
+            Vorname
+          </td>
+          <td>
+            Name
+          </td>
+          <td>
+            Typ
+          </td>
+          <td>
+            Alter
+          </td>
+          <td>
+            Info
+          </td>
+          <td class="text-right">
+            Aktionen
+          </td>
+        </tr>
+      </thad>
+      <tbody>
+        <% @animals.each do |animal| %>
+          <tr>
+            <td>
+              <%= animal.pre_name %>
+            </td>
+            <td>
+              <%= animal.name %>
+            </td>
+            <td>
+              <%= animal.animal_type %>
+            </td>
+            <td>
+              <%= animal.age %>
+            </td>
+            <td>
+              <%= animal.info %>
+            </td>
+            <td class="text-right">
+              <div class="row">
+                <div class="col">
+                  <%= link_to "Delete", animal_path(animal), method: :delete, data: {confirm: "Bisch sicher ?"}, class: "btn btn-danger" %>
+                  <%= link_to "Edit", edit_animal_path(animal), class: "btn btn-primary" %>
+                  <%= link_to "View", animal_path(animal), class: "btn btn-primary" %>
+                </div>
+              </div>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

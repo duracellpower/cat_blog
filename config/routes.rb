@@ -4,15 +4,9 @@ Rails.application.routes.draw do
 
   #root 'greetings#index'
 
-  root 'cats#index'
+  root 'animals#index'
 
+  resources :animals
   resources :cats
-  resources :dogs
-  resources :horses
-  resources :lions
-  resources :elefants
-  resources :snakes
-  resources :birds
-
 
 end

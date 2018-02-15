@@ -19,4 +19,8 @@ img.cat-brand-icon {
 
 
 @import "bootstrap";
-@import "cats"
+
+table.cats-table {
+  td { background-color: #f7f7f9; }
+  td:nth-child(2) { background-color: white; }
+}
